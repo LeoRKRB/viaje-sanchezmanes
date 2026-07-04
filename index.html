@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>日本 2026 — Guía de sitios</title>
+<title>日本 2026 — Guia de llocs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -12,23 +12,9 @@
     --ink:#211a14;
     --line: rgba(33,26,20,0.14);
 
-    /* Osaka */
-    --osaka-a:#b8302a;
-    --osaka-b:#e2a33b;
-    --osaka-deep:#3a120f;
-    --osaka-tint:#fbe9df;
-
-    /* Kyoto */
-    --kyoto-a:#4c5c3c;
-    --kyoto-b:#a63a2d;
-    --kyoto-deep:#1e2517;
-    --kyoto-tint:#ece7d6;
-
-    /* Tokyo */
-    --tokyo-a:#2c3b8f;
-    --tokyo-b:#e0316b;
-    --tokyo-deep:#0c0e22;
-    --tokyo-tint:#e6e8f7;
+    --osaka-a:#b8302a; --osaka-b:#e2a33b; --osaka-deep:#3a120f; --osaka-tint:#fbe9df;
+    --kyoto-a:#4c5c3c; --kyoto-b:#a63a2d; --kyoto-deep:#1e2517; --kyoto-tint:#ece7d6;
+    --tokyo-a:#2c3b8f; --tokyo-b:#e0316b; --tokyo-deep:#0c0e22; --tokyo-tint:#e6e8f7;
 
     --accent-a: var(--osaka-a);
     --accent-b: var(--osaka-b);
@@ -46,15 +32,11 @@
     min-height:100vh;
   }
   ::selection{ background: var(--accent-a); color: #fff; }
-
   .mono{ font-family:'JetBrains Mono', monospace; }
 
   /* ---------- HERO ---------- */
   .hero{
-    position:relative;
-    padding: 56px 24px 40px;
-    text-align:center;
-    overflow:hidden;
+    position:relative; padding: 56px 24px 40px; text-align:center; overflow:hidden;
     background:
       radial-gradient(ellipse at 20% -10%, var(--accent-b) 0%, transparent 45%),
       radial-gradient(ellipse at 90% 10%, var(--accent-a) 0%, transparent 40%),
@@ -63,92 +45,34 @@
     transition: background 1s ease;
   }
   .hero .eyebrow{
-    font-family:'JetBrains Mono', monospace;
-    letter-spacing: .35em;
-    text-transform: uppercase;
-    font-size: 11px;
-    opacity: .75;
-    margin-bottom: 14px;
+    font-family:'JetBrains Mono', monospace; letter-spacing: .35em; text-transform: uppercase;
+    font-size: 11px; opacity: .75; margin-bottom: 14px;
   }
   .hero h1{
-    font-family:'Shippori Mincho', serif;
-    font-weight: 800;
-    font-size: clamp(38px, 7vw, 74px);
-    margin: 0 0 6px;
-    line-height: 1.02;
-    letter-spacing: .01em;
+    font-family:'Shippori Mincho', serif; font-weight: 800;
+    font-size: clamp(38px, 7vw, 74px); margin: 0 0 6px; line-height: 1.02; letter-spacing: .01em;
   }
-  .hero h1 span{ display:inline-block; }
-  .hero .sub{
-    font-size: 15px;
-    opacity:.85;
-    max-width: 560px;
-    margin: 10px auto 30px;
-    line-height: 1.6;
-  }
+  .hero .sub{ font-size: 15px; opacity:.85; max-width: 560px; margin: 10px auto 30px; line-height: 1.6; }
 
   .route{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap: 6px;
-    flex-wrap: wrap;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 12px;
-    letter-spacing:.04em;
-    opacity:.9;
+    display:flex; justify-content:center; align-items:center; gap: 6px; flex-wrap: wrap;
+    font-family:'JetBrains Mono', monospace; font-size: 12px; letter-spacing:.04em; opacity:.9;
   }
-  .route .stop{
-    padding: 5px 12px;
-    border: 1px solid rgba(247,241,228,0.35);
-    border-radius: 999px;
-    white-space:nowrap;
-  }
+  .route .stop{ padding: 5px 12px; border: 1px solid rgba(247,241,228,0.35); border-radius: 999px; white-space:nowrap; }
   .route .arrow{ opacity:.5; }
 
   /* ---------- TABS ---------- */
   .tabbar{
-    position: sticky;
-    top:0;
-    z-index: 50;
-    display:flex;
-    justify-content:center;
-    gap: 0;
-    background: var(--paper);
-    border-bottom: 1px solid var(--line);
-    padding: 0 16px;
+    position: sticky; top:0; z-index: 50; display:flex; justify-content:center; gap: 0;
+    background: var(--paper); border-bottom: 1px solid var(--line); padding: 0 16px;
   }
   .tab{
-    appearance:none;
-    border:none;
-    background:none;
-    font-family:'Shippori Mincho', serif;
-    font-weight:700;
-    font-size: 16px;
-    color: var(--ink);
-    opacity:.45;
-    padding: 18px 22px 14px;
-    cursor:pointer;
-    position:relative;
-    letter-spacing:.03em;
+    appearance:none; border:none; background:none; font-family:'Shippori Mincho', serif; font-weight:700;
+    font-size: 16px; color: var(--ink); opacity:.45; padding: 18px 22px 14px; cursor:pointer; position:relative; letter-spacing:.03em;
   }
-  .tab .jp{
-    display:block;
-    font-family:'Zen Kaku Gothic New',sans-serif;
-    font-weight:400;
-    font-size:11px;
-    letter-spacing:.25em;
-    margin-top:2px;
-  }
+  .tab .jp{ display:block; font-family:'Zen Kaku Gothic New',sans-serif; font-weight:400; font-size:11px; letter-spacing:.25em; margin-top:2px; }
   .tab.active{ opacity:1; }
-  .tab.active::after{
-    content:"";
-    position:absolute;
-    left: 18%; right:18%; bottom:0;
-    height: 3px;
-    background: var(--accent-a);
-    border-radius: 2px 2px 0 0;
-  }
+  .tab.active::after{ content:""; position:absolute; left: 18%; right:18%; bottom:0; height: 3px; background: var(--accent-a); border-radius: 2px 2px 0 0; }
   .tab[data-city="osaka"].active{ color: var(--osaka-a); }
   .tab[data-city="kyoto"].active{ color: var(--kyoto-a); }
   .tab[data-city="tokyo"].active{ color: var(--tokyo-a); }
@@ -157,528 +81,723 @@
   .section{ display:none; }
   .section.active{ display:block; }
 
-  .section-intro{
-    max-width: 900px;
-    margin: 34px auto 8px;
-    padding: 0 24px;
-  }
-  .section-intro h2{
-    font-family:'Shippori Mincho', serif;
-    font-size: 28px;
-    margin: 0 0 8px;
-    color: var(--accent-a);
-  }
-  .section-intro p{
-    margin:0;
-    font-size: 14.5px;
-    line-height:1.65;
-    opacity:.8;
-    max-width: 640px;
-  }
+  .section-intro{ max-width: 900px; margin: 34px auto 8px; padding: 0 24px; }
+  .section-intro h2{ font-family:'Shippori Mincho', serif; font-size: 28px; margin: 0 0 8px; color: var(--accent-a); }
+  .section-intro p{ margin:0; font-size: 14.5px; line-height:1.65; opacity:.8; max-width: 640px; }
 
   .grid{
-    max-width: 1200px;
-    margin: 26px auto 90px;
-    padding: 0 24px;
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 18px;
+    max-width: 1200px; margin: 26px auto 90px; padding: 0 24px;
+    display:grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 18px;
+    align-items:start;
   }
 
   .card{
-    background:#fff;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 20px 20px 18px;
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+    background:#fff; border: 1px solid var(--line); border-radius: 14px; padding: 20px 20px 18px;
+    position:relative; display:flex; flex-direction:column; gap:10px; box-shadow: 0 1px 0 rgba(0,0,0,0.02);
   }
-  .card::before{
-    content:"";
-    position:absolute;
-    top:0; left:0;
-    width: 5px; height: 100%;
-    background: var(--accent-a);
-    border-radius: 14px 0 0 14px;
-  }
-  .card .top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap: 10px;
-  }
-  .card h3{
-    font-family:'Shippori Mincho', serif;
-    font-size: 19px;
-    margin: 0;
-    line-height:1.3;
-    color: var(--ink);
-  }
+  .card::before{ content:""; position:absolute; top:0; left:0; width: 5px; height: 100%; background: var(--accent-a); border-radius: 14px 0 0 14px; }
+  .card .top{ display:flex; justify-content:space-between; align-items:flex-start; gap: 10px; }
+  .card h3{ font-family:'Shippori Mincho', serif; font-size: 19px; margin: 0; line-height:1.3; color: var(--ink); }
   .badge{
-    flex-shrink:0;
-    font-family:'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    background: var(--accent-tint);
-    color: var(--accent-a);
-    padding: 4px 8px;
-    border-radius: 999px;
-    white-space:nowrap;
+    flex-shrink:0; font-family:'JetBrains Mono', monospace; font-size: 10px; letter-spacing:.05em; text-transform:uppercase;
+    background: var(--accent-tint); color: var(--accent-a); padding: 4px 8px; border-radius: 999px; white-space:nowrap;
   }
-  .row{
-    display:flex;
-    gap: 9px;
-    font-size: 13px;
-    line-height:1.55;
-    align-items:flex-start;
-  }
+  .row{ display:flex; gap: 9px; font-size: 13px; line-height:1.55; align-items:flex-start; }
   .row .ic{ flex-shrink:0; opacity:.7; margin-top:1px; }
   .row.hours{ font-family:'JetBrains Mono', monospace; font-size:12.5px; }
-  .row .lbl{ color:#847a6a; }
-  .row.tip{
-    background: var(--accent-tint);
-    padding: 9px 11px;
-    border-radius: 9px;
-    font-size:12.5px;
-    color: var(--accent-deep);
-  }
+  .row.tip{ background: var(--accent-tint); padding: 9px 11px; border-radius: 9px; font-size:12.5px; color: var(--accent-deep); }
 
-  .card .actions{
-    margin-top: 4px;
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-  }
+  .card .actions{ margin-top: 4px; display:flex; gap:8px; }
   .btn{
-    font-family:'Zen Kaku Gothic New', sans-serif;
-    font-size: 12.5px;
-    font-weight:700;
-    text-decoration:none;
-    padding: 8px 13px;
-    border-radius: 8px;
-    cursor:pointer;
-    border: 1px solid var(--line);
-    background: #fff;
-    color: var(--ink);
+    font-family:'Zen Kaku Gothic New', sans-serif; font-size: 12.5px; font-weight:700; text-decoration:none;
+    padding: 8px 13px; border-radius: 8px; cursor:pointer; border: 1px solid var(--line); background: #fff; color: var(--ink);
     transition: all .15s ease;
   }
-  .btn.primary{
-    background: var(--accent-a);
-    border-color: var(--accent-a);
-    color:#fff;
-  }
+  .btn.primary{ background: var(--accent-a); border-color: var(--accent-a); color:#fff; }
   .btn:hover{ filter: brightness(0.96); }
   .btn.primary:hover{ filter: brightness(1.08); }
-
-  .mapwrap{
-    display:none;
-    margin-top: 6px;
-    border-radius: 10px;
-    overflow:hidden;
-    border: 1px solid var(--line);
-  }
-  .mapwrap.open{ display:block; }
-  .mapwrap iframe{
+  .btn.ghost{ background:transparent; }
+  .btn.block{
     width:100%;
-    height: 220px;
-    border:0;
-    display:block;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:4px;
   }
 
-  footer{
-    text-align:center;
-    font-size: 12px;
-    opacity:.5;
-    padding: 26px 20px 40px;
-    font-family:'JetBrains Mono', monospace;
+  .mapwrap{ display:none; margin-top: 6px; border-radius: 10px; overflow:hidden; border: 1px solid var(--line); }
+  .mapwrap.open{ display:block; }
+  .mapwrap iframe{ width:100%; height: 220px; border:0; display:block; }
+
+  /* ---------- PANELL EXPANDIBLE ---------- */
+  .more{
+    display:none;
+    margin-top: 4px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+    flex-direction:column;
+    gap: 12px;
   }
+  .more.open{ display:flex; }
+  .more h4{
+    font-family:'JetBrains Mono', monospace; text-transform:uppercase; letter-spacing:.08em;
+    font-size: 10.5px; color: var(--accent-a); margin: 0 0 6px;
+  }
+  .more p{ margin:0; font-size:13px; line-height:1.65; opacity:.88; }
+  .more .facts{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .fact{ font-size:12.5px; line-height:1.5; }
+  .fact .flbl{ font-family:'JetBrains Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:.06em; color:#847a6a; display:block; margin-bottom:2px; }
+  .links{ display:flex; flex-direction:column; gap:6px; }
+  .links a{
+    font-size: 12.5px; color: var(--accent-a); text-decoration:none; display:flex; align-items:center; gap:6px;
+    border-bottom: 1px solid transparent;
+  }
+  .links a:hover{ border-bottom-color: var(--accent-a); }
+  .links a::before{ content:"↗"; font-size: 11px; opacity:.6; }
+
+  .chev{ display:inline-block; transition: transform .2s ease; }
+  .toggle-more.open .chev{ transform: rotate(180deg); }
+
+  footer{ text-align:center; font-size: 12px; opacity:.5; padding: 26px 20px 40px; font-family:'JetBrains Mono', monospace; }
 
   @media (max-width: 520px){
     .tab{ padding: 14px 12px 12px; font-size:14px; }
     .hero{ padding: 40px 16px 32px; }
+    .more .facts{ grid-template-columns: 1fr; }
+    .card .actions{ flex-direction:column; }
   }
 </style>
 </head>
 <body>
 
   <div class="hero" id="hero">
-    <div class="eyebrow">Planificador de viaje · Julio–Agosto</div>
+    <div class="eyebrow">Planificador de viatge · Juliol–Agost</div>
     <h1><span id="heroTitleJp">大阪</span> · <span id="heroTitleEn">Osaka</span></h1>
-    <p class="sub" id="heroSub">Castillos, mercados de comida y el barrio de neones de Dotonbori: la puerta de entrada a Kansai.</p>
+    <p class="sub" id="heroSub">Castells, mercats de menjar i el barri de neons de Dotonbori: la porta d'entrada a Kansai.</p>
     <div class="route">
       <span class="stop">Osaka</span><span class="arrow">→</span>
       <span class="stop">Nara</span><span class="arrow">→</span>
       <span class="stop">Himeji</span><span class="arrow">→</span>
-      <span class="stop">Kioto</span><span class="arrow">→</span>
+      <span class="stop">Kyoto</span><span class="arrow">→</span>
       <span class="stop">Kamakura</span><span class="arrow">→</span>
       <span class="stop">Nikko</span><span class="arrow">→</span>
-      <span class="stop">Tokio</span>
+      <span class="stop">Tòquio</span>
     </div>
   </div>
 
   <div class="tabbar">
     <button class="tab active" data-city="osaka">大阪<span class="jp">OSAKA</span></button>
     <button class="tab" data-city="kyoto">京都<span class="jp">KYOTO</span></button>
-    <button class="tab" data-city="tokyo">東京<span class="jp">TOKYO</span></button>
+    <button class="tab" data-city="tokyo">東京<span class="jp">TÒQUIO</span></button>
   </div>
 
   <section class="section active" id="section-osaka">
     <div class="section-intro">
-      <h2>大阪 — Osaka &amp; alrededores</h2>
-      <p>Incluye la excursión a Nara y Himeji. Osaka se recorre mejor de noche (Dotonbori) y de día en sus templos y castillo.</p>
+      <h2>大阪 — Osaka i voltants</h2>
+      <p>Inclou l'excursió a Nara i Himeji. Osaka es visita millor de nit (Dotonbori) i de dia als seus temples i castell.</p>
     </div>
     <div class="grid" id="grid-osaka"></div>
   </section>
 
   <section class="section" id="section-kyoto">
     <div class="section-intro">
-      <h2>京都 — Kioto</h2>
-      <p>La antigua capital imperial: templos, bosques de bambú y el barrio de geishas de Gion. Muchos templos cierran temprano (16:00–17:30).</p>
+      <h2>京都 — Kyoto</h2>
+      <p>L'antiga capital imperial: temples, boscos de bambú i el barri de geishes de Gion. Molts temples tanquen aviat (16:00–17:30).</p>
     </div>
     <div class="grid" id="grid-kyoto"></div>
   </section>
 
   <section class="section" id="section-tokyo">
     <div class="section-intro">
-      <h2>東京 — Tokio y excursiones</h2>
-      <p>Incluye Kamakura, Enoshima, Nikko y Hakone como excursiones de un día. Tokio mezcla templos centenarios con miradores futuristas.</p>
+      <h2>東京 — Tòquio i excursions</h2>
+      <p>Inclou Kamakura, Enoshima, Nikko i Hakone com a excursions d'un dia. Tòquio barreja temples centenaris amb miradors futuristes.</p>
     </div>
     <div class="grid" id="grid-tokyo"></div>
   </section>
 
-  <footer>作成 · Guía generada a partir de tu planificador Cocotrip — horarios de referencia, confirma siempre en la web oficial antes de viajar</footer>
+  <footer>作成 · Guia generada a partir del teu planificador Cocotrip — horaris i preus de referència, confirma sempre a la web oficial abans de viatjar</footer>
 
 <script>
 const DATA = {
   osaka: {
     jp: "大阪", en: "Osaka",
-    sub: "Castillos, mercados de comida y el barrio de neones de Dotonbori: la puerta de entrada a Kansai.",
+    sub: "Castells, mercats de menjar i el barri de neons de Dotonbori: la porta d'entrada a Kansai.",
     sites: [
       {
-        name: "Castillo de Osaka", cat: "Castillo",
-        hours: "Torre: 9:00–17:00 (mar–oct hasta 18:00 en temporada alta) · Jardín Nishinomaru: 9:00–17:00, cerrado lunes",
+        name: "Castell d'Osaka", cat: "Castell",
+        hours: "Torre: 9:00–17:00 (fins a les 18:00 en temporada alta) · Jardí Nishinomaru: 9:00–17:00, tancat els dilluns",
         address: "1-1 Osakajo, Chuo-ku, Osaka",
-        tip: "El parque y el exterior son gratis 24h; solo se paga por entrar a la torre (600¥) y al Jardín Nishinomaru (200¥, con cerezos en flor).",
-        query: "Osaka Castle, 1-1 Osakajo, Chuo-ku, Osaka"
+        tip: "El parc i l'exterior són gratuïts les 24h; només es paga per entrar a la torre (600¥) i al Jardí Nishinomaru (200¥, amb cirerers en flor).",
+        query: "Osaka Castle, 1-1 Osakajo, Chuo-ku, Osaka",
+        desc: "Construït el 1583 per Toyotomi Hideyoshi com a símbol del Japó recentment unificat, va ser destruït i reconstruït diverses vegades; la torre actual és una reconstrucció de formigó de 1931 que fa de museu sobre la història del castell i d'Osaka. Les seves 106 hectàrees de parc, fossats i muralles de pedra són un dels espais verds més populars de la ciutat.",
+        price: "600¥ torre · 200¥ Jardí Nishinomaru (350¥ en sakura) · parc gratuït",
+        getThere: "10-15 min a peu des de l'estació JR Osakajokoen o Morinomiya (línia circular JR Loop)",
+        links: [
+          {label:"Fitxa oficial – Japan Travel (JNTO)", url:"https://www.japan.travel/es/spot/1087/"},
+          {label:"Guia de visita – JRailPass", url:"https://www.jrailpass.com/blog/es/castillo-de-osaka"}
+        ]
       },
       {
-        name: "Kuromon Ichiba", cat: "Mercado",
-        hours: "≈9:00–18:00 (varía por tienda; algunas cierran domingo)",
+        name: "Kuromon Ichiba", cat: "Mercat",
+        hours: "≈9:00–18:00 (varia segons la parada; algunes tanquen diumenge)",
         address: "2-4-1 Nipponbashi, Chuo-ku, Osaka",
-        tip: "Lleva efectivo. Ve a primera hora para el marisco más fresco, o al final de la tarde para descuentos.",
-        query: "Kuromon Ichiba Market, 2-4-1 Nipponbashi, Chuo-ku, Osaka"
+        tip: "Porta efectiu. Vés a primera hora per al marisc més fresc, o al final de la tarda per a descomptes.",
+        query: "Kuromon Ichiba Market, 2-4-1 Nipponbashi, Chuo-ku, Osaka",
+        desc: "Anomenat 'la cuina d'Osaka', aquest mercat cobert de més de 200 anys reuneix unes 150 parades de peix, marisc, carn i fruita, moltes de les quals preparen el menjar a l'instant per menjar dret mentre passeges.",
+        price: "Gratuït (pagues el que consumeixes; racions des de 200¥)",
+        getThere: "2 min a peu des de la sortida 2 de l'estació Nipponbashi (línies Sennichimae/Sakaisuji) o 10 min des de Namba",
+        links: [
+          {label:"Fitxa oficial – Osaka Info", url:"https://osaka-info.jp/es/spot/kuromon-market/"},
+          {label:"Fitxa oficial – Japan Travel (JNTO)", url:"https://www.japan.travel/en/spot/1103/"}
+        ]
       },
       {
-        name: "Dotonbori", cat: "Barrio / noche",
-        hours: "Abierto siempre · ambiente a partir de 18:00",
+        name: "Dotonbori", cat: "Barri / nit",
+        hours: "Obert sempre · ambient a partir de les 18:00",
         address: "Dotonbori, Chuo-ku, Osaka",
-        tip: "El cartel de Glico Man es el punto de foto clásico. Prueba el takoyaki en algún puesto del canal.",
-        query: "Dotonbori, Chuo-ku, Osaka"
+        tip: "El cartell de Glico Man és el punt de foto clàssic. Prova el takoyaki en algun parada del canal.",
+        query: "Dotonbori, Chuo-ku, Osaka",
+        desc: "Barri d'oci i restauració vora un canal de 400 anys, cor de la cultura 'kuidaore' d'Osaka (menjar fins a arruïnar-se). Les seves façanes cobertes de cartells de neó gegants —crancs, pops, i el corredor Glico Man des de 1935— són una de les imatges més icòniques del Japó.",
+        price: "Gratuït passejar; menjar de carrer des de 300¥",
+        getThere: "Estació de Namba (línies Midosuji, Sennichimae, Yotsubashi, Nankai), sortida cap al nord",
+        links: [
+          {label:"Fitxa oficial – Japan Travel (JNTO)", url:"https://www.japan.travel/en/spot/2207/"},
+          {label:"Guia del barri – Japan Travel (JNTO)", url:"https://www.japan.travel/en/destinations/kansai/osaka/dotonbori-and-shinsaibashi/"}
+        ]
       },
       {
-        name: "Hozenji Yokocho", cat: "Callejón",
-        hours: "Abierto siempre",
-        address: "Namba, Chuo-ku, Osaka (junto a Dotonbori)",
-        tip: "Callejón de piedra con farolillos; entra al templo Hozenji y moja la estatua cubierta de musgo (Mizukake Fudo).",
-        query: "Hozenji Yokocho, Namba, Chuo-ku, Osaka"
+        name: "Hozenji Yokocho", cat: "Carreró",
+        hours: "Obert sempre",
+        address: "Namba, Chuo-ku, Osaka (al costat de Dotonbori)",
+        tip: "Carreró de pedra amb fanalets; entra al temple Hozenji i mulla l'estàtua coberta de molsa (Mizukake Fudo).",
+        query: "Hozenji Yokocho, Namba, Chuo-ku, Osaka",
+        desc: "Estret carreró empedrat amb fanalets que conserva l'ambient de l'antiga Osaka, just al sud de Dotonbori. Al seu interior s'hi amaga el petit temple Hozenji, amb l'estàtua de Fudo Myoo coberta de molsa perquè els visitants li tiren aigua quan preguen.",
+        price: "Gratuït",
+        getThere: "3 min a peu des de Dotonbori, cap al sud creuant Sennichimae-dori",
+        links: [
+          {label:"Esmentat a la guia del barri – Japan Travel (JNTO)", url:"https://www.japan.travel/en/destinations/kansai/osaka/dotonbori-and-shinsaibashi/"}
+        ]
       },
       {
-        name: "Namba Yasaka Jinja", cat: "Santuario",
-        hours: "≈9:00–17:00, entrada gratuita",
+        name: "Namba Yasaka Jinja", cat: "Santuari",
+        hours: "≈9:00–17:00, entrada gratuïta",
         address: "2-9 Motomachi, Naniwa-ku, Osaka",
-        tip: "Conocido por su escenario en forma de cabeza de león gigante (Ema-den), muy fotogénico y poco masificado.",
-        query: "Namba Yasaka Shrine, 2-9 Motomachi, Naniwa-ku, Osaka"
+        tip: "Conegut pel seu escenari en forma de cap de lleó gegant (Ema-den), molt fotogènic i poc massificat.",
+        query: "Namba Yasaka Shrine, 2-9 Motomachi, Naniwa-ku, Osaka",
+        desc: "Petit santuari sintoista famós pel seu Ema-den, un escenari amb forma de cap de lleó de 12 metres que 'engoleix' la mala sort de qui passa per la seva boca. Molt poc conegut entre turistes tot i estar a només 10 minuts de Namba.",
+        price: "Gratuït",
+        getThere: "10 min a peu des de l'estació de Namba, direcció sud",
+        links: []
       },
       {
-        name: "Shinsekai", cat: "Barrio retro",
-        hours: "Abierto siempre · restaurantes ≈11:00–23:00",
+        name: "Shinsekai", cat: "Barri retro",
+        hours: "Obert sempre · restaurants ≈11:00–23:00",
         address: "Ebisu-higashi, Naniwa-ku, Osaka",
-        tip: "Barrio retro junto a la torre Tsutenkaku. Prueba el kushikatsu: regla de oro, no mojes dos veces en la salsa.",
-        query: "Shinsekai, Naniwa-ku, Osaka"
+        tip: "Barri retro al costat de la torre Tsutenkaku. Prova el kushikatsu: regla d'or, no mullis dues vegades a la salsa.",
+        query: "Shinsekai, Naniwa-ku, Osaka",
+        desc: "Barri construït a principis del segle XX inspirat en Nova York i París, avui conegut per la seva estètica retro-futurista, la torre Tsutenkaku i els seus incomptables locals de kushikatsu (broquetes fregides), especialitat nascuda precisament en aquest barri.",
+        price: "Gratuït passejar; kushikatsu des de ≈150¥/broqueta",
+        getThere: "Estació Dobutsuen-mae (Midosuji/Sakaisuji) o Shin-Imamiya (JR/Nankai)",
+        links: [
+          {label:"Itinerari Osaka Nord-Sud – Japan Travel (JNTO)", url:"https://www.japan.travel/en/itineraries/osaka-from-north-to-south/"}
+        ]
       },
       {
-        name: "Shinsaibashi", cat: "Compras",
-        hours: "Tiendas ≈10:00–20:00",
+        name: "Shinsaibashi", cat: "Compres",
+        hours: "Botigues ≈10:00–20:00",
         address: "Shinsaibashisuji, Chuo-ku, Osaka",
-        tip: "Calle comercial cubierta larguísima; conecta directamente con Dotonbori y Amerikamura.",
-        query: "Shinsaibashi Shopping Street, Chuo-ku, Osaka"
+        tip: "Carrer comercial cobert llarguíssim; connecta directament amb Dotonbori i Amerikamura.",
+        query: "Shinsaibashi Shopping Street, Chuo-ku, Osaka",
+        desc: "Galeria comercial coberta de gairebé 600 metres que existeix des del segle XVII, amb marques internacionals, botigues locals, drogueries i el barri vintage d'Amerikamura just a l'oest.",
+        price: "Gratuït (compres a partir de 100¥)",
+        getThere: "Estació de Shinsaibashi (línia Midosuji), connecta a peu amb Dotonbori i Namba",
+        links: [
+          {label:"Guia del barri – Japan Travel (JNTO)", url:"https://www.japan.travel/en/destinations/kansai/osaka/dotonbori-and-shinsaibashi/"}
+        ]
       },
       {
-        name: "Shitennoji", cat: "Templo",
-        hours: "Recinto exterior: siempre abierto (gratis) · Garan/Jardín: 8:30–16:30 (abr–sep) / 8:30–16:00 (oct–mar)",
+        name: "Shitennoji", cat: "Temple",
+        hours: "Recinte exterior: sempre obert (gratuït) · Garan/Jardí: 8:30–16:30 (abr–set) / 8:30–16:00 (oct–mar)",
         address: "1-11-18 Shitennoji, Tennoji-ku, Osaka",
-        tip: "El templo budista oficial más antiguo de Japón (593 d.C.). Los días 21 y 22 de cada mes hay mercadillo.",
-        query: "Shitennoji Temple, 1-11-18 Shitennoji, Tennoji-ku, Osaka"
+        tip: "El temple budista oficial més antic del Japó (593 dC). Els dies 21 i 22 de cada mes hi ha mercadet.",
+        query: "Shitennoji Temple, 1-11-18 Shitennoji, Tennoji-ku, Osaka",
+        desc: "Fundat l'any 593 pel príncep Shotoku, es considera el primer temple budista oficial del Japó. El recinte interior (Garan) alberga la pagoda de cinc pisos i el saló principal; el Jardí Gokuraku-jodo representa el paradís occidental del Buda Amida.",
+        price: "Recinte exterior gratuït · Garan 300¥ · Jardí 300¥ · Casa del Tresor 500¥",
+        getThere: "5 min a peu des de l'estació Shitennoji-mae Yuhigaoka (línia Tanimachi)",
+        links: [
+          {label:"Fitxa oficial – Osaka Info", url:"https://osaka-info.jp/es/spot/shitennoji/"},
+          {label:"Web oficial del temple", url:"https://www.shitennoji.or.jp/"}
+        ]
       },
       {
-        name: "Universal Studios Japan", cat: "Parque",
-        hours: "Variable, normalmente 8:30/9:00–20:00/21:00 (consultar app oficial el día de la visita)",
+        name: "Universal Studios Japan", cat: "Parc",
+        hours: "Variable, normalment 8:30/9:00–20:00/21:00 (cal consultar l'app oficial el dia de la visita)",
         address: "2-1-33 Sakurajima, Konohana-ku, Osaka",
-        tip: "Para Super Nintendo World sin Express Pass, consigue el 'Area Timed Entry' gratis en la app nada más entrar al parque.",
-        query: "Universal Studios Japan, 2-1-33 Sakurajima, Konohana-ku, Osaka"
+        tip: "Per a Super Nintendo World sense Express Pass, aconsegueix l'entrada horària gratuïta ('Area Timed Entry') a l'app just en entrar al parc.",
+        query: "Universal Studios Japan, 2-1-33 Sakurajima, Konohana-ku, Osaka",
+        desc: "Parc temàtic d'Universal a la badia d'Osaka, amb Super Nintendo World (el primer parc temàtic de Nintendo del món), el Món Màgic de Harry Potter, Minion Park i Jurassic Park. És l'atracció més visitada d'Osaka.",
+        price: "Studio Pass 1 dia des de ≈8.600¥ (~53€); Express Pass a part",
+        getThere: "Línia JR Yumesaki (JR Loop Line + transbord a Nishikujo) fins a Universal City",
+        links: [
+          {label:"Horaris oficials – USJ", url:"https://www.usj.co.jp/web/en/us/park-guide/schedule/park-hour"}
+        ]
       },
       {
-        name: "Nara Park", cat: "Parque / excursión",
-        hours: "Abierto siempre, entrada gratuita",
+        name: "Nara Park", cat: "Parc / excursió",
+        hours: "Obert sempre, entrada gratuïta",
         address: "Nara Park, Nara",
-        tip: "Compra galletas 'shika senbei' (≈150¥) para los ciervos; hazles una reverencia y muchos te la devuelven.",
-        query: "Nara Park, Nara"
+        tip: "Compra galetes 'shika senbei' (≈150¥) per als cérvols; fes-los una reverència i molts te la retornaran.",
+        query: "Nara Park, Nara",
+        desc: "Parc de 1880 amb més de 1.200 cérvols sika que campen en llibertat i es consideren missatgers sagrats del sintoisme. Al seu interior es troben el temple Todai-ji, el santuari Kasuga Taisha i el Museu Nacional de Nara.",
+        price: "Gratuït · galetes per als cérvols ≈150¥",
+        getThere: "30-45 min en tren JR Yamatoji des de Namba o Tennoji (Osaka); 45 min des de Kyoto amb la línia JR Nara",
+        links: [
+          {label:"Guia de visita – JRailPass", url:"https://www.jrailpass.com/blog/es/parque-ciervos-nara"}
+        ]
       },
       {
-        name: "Todai-ji", cat: "Templo (Nara)",
+        name: "Todai-ji", cat: "Temple (Nara)",
         hours: "7:30–17:30 (abr–oct) · 8:00–17:00 (nov–mar)",
         address: "406-1 Zoshicho, Nara",
-        tip: "El edificio de madera más grande del mundo, con el Gran Buda de 15 m. Entrada 800¥.",
-        query: "Todaiji Temple, 406-1 Zoshicho, Nara"
+        tip: "L'edifici de fusta més gran del món, amb el Gran Buda de 15 m. Entrada 800¥.",
+        query: "Todaiji Temple, 406-1 Zoshicho, Nara",
+        desc: "Fundat l'any 728 per l'emperador Shomu, el seu Daibutsuden (Saló del Gran Buda) és l'edifici de fusta més gran del món i alberga una estàtua de bronze del Buda Vairocana de 15 metres d'alçada. Patrimoni de la Humanitat per la UNESCO.",
+        price: "800¥ adults · 400¥ primària",
+        getThere: "7 min en autobús circular des de l'estació JR/Kintetsu Nara, parada Todaiji Daibutsuden",
+        links: [
+          {label:"Guia completa – JeePe", url:"https://www.jeepe.jp/es/articles/todaiji-nara-travel-guide-1223"},
+          {label:"Guia de visita – Chijako", url:"https://www.chijako.com/japon/templo-todaiji/"}
+        ]
       },
       {
-        name: "Kasuga Taisha", cat: "Santuario (Nara)",
-        hours: "6:30–17:30 (mar–oct) · 7:00–17:00 (nov–feb) · recinto gratis, Honden 500¥",
+        name: "Kasuga Taisha", cat: "Santuari (Nara)",
+        hours: "6:30–17:30 (mar–oct) · 7:00–17:00 (nov–feb) · recinte gratuït, Honden especial 500¥",
         address: "160 Kasuganocho, Nara",
-        tip: "Famoso por sus ~3.000 farolillos de piedra y bronce. Camina hasta allí desde Todai-ji por el bosque de Nara.",
-        query: "Kasuga Taisha, 160 Kasuganocho, Nara"
+        tip: "Famós pels seus ~3.000 fanalets de pedra i bronze. Camina fins allà des de Todai-ji pel bosc de Nara.",
+        query: "Kasuga Taisha, 160 Kasuganocho, Nara",
+        desc: "Santuari sintoista fundat el 768 pel poderós clan Fujiwara, Patrimoni de la Humanitat. El seu camí d'accés està flanquejat per uns 2.000 fanalets de pedra, i el recinte principal en té 1.000 més de bronze que s'encenen dues vegades l'any durant el festival Mantoro.",
+        price: "Recinte gratuït · visita especial al Honden 500¥ · jardí botànic 500¥",
+        getThere: "20-30 min a peu des del Parc de Nara, o autobús fins a la parada Kasuga Taisha Honden",
+        links: [
+          {label:"Guia completa – JeePe", url:"https://www.jeepe.jp/es/articles/kasuga-taisha-nara-guide-1220"},
+          {label:"Història i visita – Japan Experience", url:"https://japan-experience.com/es/todo-sobre-japon/nara/templos-santuarios/kasuga-taisha"}
+        ]
       },
       {
-        name: "Castillo Himeji", cat: "Castillo / excursión",
-        hours: "9:00–17:00 (sep–abr) · 9:00–18:00 (abr–ago) · cerrado 29–30 dic",
+        name: "Castell Himeji", cat: "Castell / excursió",
+        hours: "9:00–17:00 (set–abr) · 9:00–18:00 (abr–ago) · tancat el 29–30 des",
         address: "68 Honmachi, Himeji, Hyogo",
-        tip: "El castillo original mejor conservado de Japón, Patrimonio de la Humanidad. Entrada 2.500¥ (desde marzo 2026). A 1h de Osaka en tren.",
-        query: "Himeji Castle, 68 Honmachi, Himeji, Hyogo"
+        tip: "El castell original millor conservat del Japó, Patrimoni de la Humanitat. Entrada 2.500¥ (des de març de 2026). A 1h d'Osaka en tren.",
+        query: "Himeji Castle, 68 Honmachi, Himeji, Hyogo",
+        desc: "Conegut com 'el castell de la garsa blanca' per la seva façana immaculada, és un dels 12 castells originals que sobreviuen al Japó i el millor conservat del país. Primer Patrimoni de la Humanitat del Japó (1993) juntament amb Todai-ji i altres llocs de Nara.",
+        price: "2.500¥ adults (des de març de 2026) · menors de 18 anys gratuït",
+        getThere: "15-20 min a peu des de l'estació de Himeji (Shinkansen JR Sanyo, ≈1h des de Shin-Osaka)",
+        links: [
+          {label:"Web oficial de turisme d'Himeji", url:"https://visit-himeji.com/es/sightseeing/himeji-castle/"},
+          {label:"Guia de visita – JRailPass", url:"https://www.jrailpass.com/blog/es/himeji-castillo-guia"}
+        ]
       },
       {
-        name: "Parque Minoo", cat: "Naturaleza",
-        hours: "Abierto siempre, entrada gratuita",
+        name: "Parc Minoo", cat: "Natura",
+        hours: "Obert sempre, entrada gratuïta",
         address: "Minoo Park, Osaka",
-        tip: "Sendero de bosque de ~40 min hasta la cascada Minoo; en otoño el follaje es espectacular. Prueba el momiji tempura.",
-        query: "Minoo Park, Osaka"
+        tip: "Camí de bosc de ~40 min fins a la cascada Minoo; a la tardor el fullatge és espectacular. Prova el momiji tempura.",
+        query: "Minoo Park, Osaka",
+        desc: "Parc natural als afores d'Osaka amb un camí d'uns 2,7 km entre bosc fins a la cascada Minoo, de 33 metres. És un dels millors llocs de la regió per veure el fullatge de tardor (koyo), i la seva llaminadura típica és el momiji tempura (fulles d'auró fregides).",
+        price: "Gratuït",
+        getThere: "5 min a peu des de l'estació Hankyu Minoo (línia Minoo des d'Umeda, ≈25 min)",
+        links: []
       },
       {
-        name: "Sumiyoshi Taisha", cat: "Santuario",
-        hours: "6:00–17:00, todos los días",
+        name: "Sumiyoshi Taisha", cat: "Santuari",
+        hours: "6:00–17:00, tots els dies",
         address: "2-9-89 Sumiyoshi, Sumiyoshi-ku, Osaka",
-        tip: "Uno de los santuarios sintoístas más antiguos de Japón, con su icónico puente rojo arqueado Taiko-bashi.",
-        query: "Sumiyoshi Taisha, 2-9-89 Sumiyoshi, Sumiyoshi-ku, Osaka"
+        tip: "Un dels santuaris sintoistes més antics del Japó, amb el seu icònic pont vermell arquejat Taiko-bashi.",
+        query: "Sumiyoshi Taisha, 2-9-89 Sumiyoshi, Sumiyoshi-ku, Osaka",
+        desc: "Fundat al segle III, és el santuari principal dels més de 2.000 santuaris Sumiyoshi del Japó, dedicats a les divinitats protectores dels mariners. La seva arquitectura Sumiyoshi-zukuri és anterior a la introducció del budisme i el seu pont vermell Taiko-bashi és un dels més fotografiats d'Osaka.",
+        price: "Gratuït",
+        getThere: "3 min a peu des de l'estació Sumiyoshi-taisha (línia Nankai)",
+        links: []
       }
     ]
   },
 
   kyoto: {
     jp: "京都", en: "Kyoto",
-    sub: "La antigua capital imperial: templos centenarios, bosques de bambú y el barrio de geishas de Gion.",
+    sub: "L'antiga capital imperial: temples centenaris, boscos de bambú i el barri de geishes de Gion.",
     sites: [
       {
-        name: "Barrio de Gion", cat: "Barrio",
-        hours: "Abierto siempre · mejor al atardecer",
+        name: "Barri de Gion", cat: "Barri",
+        hours: "Obert sempre · millor a la posta de sol",
         address: "Gion, Higashiyama-ku, Kyoto",
-        tip: "Pasea por Hanamikoji-dori al anochecer con suerte de ver alguna geiko o maiko camino a una casa de té. Sé discreto, no las persigas para fotos.",
-        query: "Gion District, Higashiyama-ku, Kyoto"
+        tip: "Passeja per Hanamikoji-dori al capvespre amb sort de veure alguna geiko o maiko de camí a una casa de te. Sigues discret, no les persegueixis per fer fotos.",
+        query: "Gion District, Higashiyama-ku, Kyoto",
+        desc: "El barri de geishes més famós de Kyoto, entre el santuari Yasaka i el riu Kamo. Les seves cases de fusta machiya, estretes per un antic impost que gravava la façana segons la seva amplada, alberguen cases de te (ochaya) on geiko i maiko encara actuen avui dia.",
+        price: "Gratuït passejar",
+        getThere: "Autobús 206 des de l'estació de Kyoto (parada Gion, 20 min) o estació Gion-Shijo (línia Keihan)",
+        links: [
+          {label:"Guia del barri – Japan Guide", url:"https://www.japan-guide.com/e/e3902.html"}
+        ]
       },
       {
-        name: "Fushimi Inari Taisha", cat: "Santuario",
-        hours: "Abierto 24h, entrada gratuita",
+        name: "Fushimi Inari Taisha", cat: "Santuari",
+        hours: "Obert 24h, entrada gratuïta",
         address: "68 Fukakusa Yabunouchicho, Fushimi-ku, Kyoto",
-        tip: "Sube al menos hasta el mirador Yotsutsuji (20–30 min); a partir de ahí hay mucha menos gente. Ve al amanecer o al anochecer.",
-        query: "Fushimi Inari Taisha, 68 Fukakusa Yabunouchicho, Fushimi-ku, Kyoto"
+        tip: "Puja com a mínim fins al mirador Yotsutsuji (20–30 min); a partir d'allà hi ha molta menys gent. Vés a l'alba o al capvespre.",
+        query: "Fushimi Inari Taisha, 68 Fukakusa Yabunouchicho, Fushimi-ku, Kyoto",
+        desc: "Santuari principal dedicat a Inari, divinitat de l'arròs i la prosperitat, fundat l'any 711. Els seus milers de torii vermells (Senbon Torii), donats per comerços i particulars al llarg dels segles, pugen 4 km per la sagrada muntanya Inari.",
+        price: "Gratuït",
+        getThere: "5 min a peu des de l'estació JR Inari (línia JR Nara) o estació Fushimi Inari (línia Keihan)",
+        links: [
+          {label:"Guia de visita – JRailPass", url:"https://www.jrailpass.com/blog/es/fushimi-inari-taisha"}
+        ]
       },
       {
-        name: "Bosque de Bambú de Arashiyama", cat: "Naturaleza",
-        hours: "Abierto 24h, entrada gratuita",
+        name: "Bosc de Bambú d'Arashiyama", cat: "Natura",
+        hours: "Obert 24h, entrada gratuïta",
         address: "Sagaogurayama Tabuchiyamacho, Ukyo-ku, Kyoto",
-        tip: "Ve antes de las 8:00 o al atardecer para evitar aglomeraciones; combina con el Puente Togetsukyo y el Templo Tenryu-ji.",
-        query: "Arashiyama Bamboo Grove, Ukyo-ku, Kyoto"
+        tip: "Vés-hi abans de les 8:00 o al capvespre per evitar aglomeracions; combina'l amb el Pont Togetsukyo i el Temple Tenryu-ji.",
+        query: "Arashiyama Bamboo Grove, Ukyo-ku, Kyoto",
+        desc: "Camí entre altíssimes canyes de bambú considerat un dels '100 paisatges sonors del Japó' pel cruixit del vent entre les canyes. Es combina fàcilment amb el proper Temple Tenryu-ji (Patrimoni de la Humanitat) i el Pont Togetsukyo.",
+        price: "Gratuït",
+        getThere: "10-15 min a peu des de l'estació JR Saga-Arashiyama o Randen Arashiyama",
+        links: [
+          {label:"Guia de la zona – JRailPass", url:"https://www.jrailpass.com/blog/es/arashiyama-kioto"}
+        ]
       },
       {
-        name: "Castillo Nijo", cat: "Castillo",
-        hours: "8:45–17:00 (última entrada 16:00) · cerrado martes en ene/jul/ago/dic",
+        name: "Castell Nijo", cat: "Castell",
+        hours: "8:45–17:00 (última entrada 16:00) · tancat els dimarts de gen/jul/ago/des",
         address: "541 Nijojocho, Nijojo-dori Horikawa-nishi-iru, Nakagyo-ku, Kyoto",
-        tip: "600¥ recinto + 400¥ Palacio Ninomaru. Fíjate en los 'suelos de ruiseñor' que chirrían para delatar intrusos.",
-        query: "Nijo Castle, 541 Nijojocho, Nakagyo-ku, Kyoto"
+        tip: "600¥ recinte + 400¥ Palau Ninomaru. Fixa't en els 'terres de rossinyol' que cruixen per delatar intrusos.",
+        query: "Nijo Castle, 541 Nijojocho, Nakagyo-ku, Kyoto",
+        desc: "Residència dels shoguns Tokugawa a Kyoto, construïda el 1603, Patrimoni de la Humanitat. El seu Palau Ninomaru conserva pintures originals sobre portes corredisses i els famosos 'terres de rossinyol' (uguisubari) que cruixen en trepitjar-los com a mecanisme de seguretat contra intrusos.",
+        price: "600¥ recinte + 400¥ Palau Ninomaru · audioguia 500¥",
+        getThere: "Estació Nijojo-mae (línia Tozai) o JR Nijo + 15 min a peu",
+        links: [
+          {label:"Guia de visita – JRailPass", url:"https://www.jrailpass.com/blog/es/castillo-nijo-kioto"}
+        ]
       },
       {
-        name: "Kiyomizu-dera", cat: "Templo",
-        hours: "6:00–18:00 (hasta 18:30 en iluminaciones especiales)",
+        name: "Kiyomizu-dera", cat: "Temple",
+        hours: "6:00–18:00 (fins a les 18:30 amb il·luminacions especials)",
         address: "1-294 Kiyomizu, Higashiyama-ku, Kyoto",
-        tip: "Entrada 400–500¥ SOLO EN EFECTIVO. Su terraza de madera sobre pilares sin clavos tiene vistas espectaculares de Kioto.",
-        query: "Kiyomizu-dera Temple, 1-294 Kiyomizu, Higashiyama-ku, Kyoto"
+        tip: "Entrada 400–500¥ NOMÉS EN EFECTIU. La seva terrassa de fusta sobre pilars sense claus té vistes espectaculars de Kyoto.",
+        query: "Kiyomizu-dera Temple, 1-294 Kiyomizu, Higashiyama-ku, Kyoto",
+        desc: "Temple budista fundat el 780, Patrimoni de la Humanitat, cèlebre per la seva terrassa de fusta suspesa a 13 metres sobre el vessant, construïda sense un sol clau. A sota hi ha la cascada Otowa, els tres raigs d'aigua de la qual s'associen a amor, estudis i longevitat (beure dels tres porta mala sort).",
+        price: "400–500¥ (segons la temporada), només efectiu",
+        getThere: "Autobús 100 o 206 des de l'estació de Kyoto, parada Gojo-zaka o Kiyomizu-michi, i pujar 10 min a peu",
+        links: [
+          {label:"Guia de visita – Japan Experience", url:"https://www.japan-experience.com/es/todo-sobre-japon/kyoto/templos-santuarios/templo-kiyomizu-dera"}
+        ]
       },
       {
-        name: "Pontocho", cat: "Callejón / noche",
-        hours: "Abierto siempre · mejor ambiente 17:00–23:00",
+        name: "Pontocho", cat: "Carreró / nit",
+        hours: "Obert sempre · millor ambient de 17:00 a 23:00",
         address: "Pontocho, Nakagyo-ku, Kyoto",
-        tip: "Callejón estrecho junto al río Kamo lleno de izakayas y restaurantes tradicionales; presupuesto medio-alto.",
-        query: "Pontocho Alley, Nakagyo-ku, Kyoto"
+        tip: "Carreró estret vora el riu Kamo ple d'izakayas i restaurants tradicionals; pressupost mitjà-alt.",
+        query: "Pontocho Alley, Nakagyo-ku, Kyoto",
+        desc: "Un dels dos districtes de geishes de Kyoto (junt amb Gion), aquest carreró estretíssim paral·lel al riu Kamo alberga ochaya, izakayas i restaurants de kaiseki. A l'estiu, molts locals instal·len terrasses sobre el riu (yuka).",
+        price: "Gratuït passejar; sopars des de ≈3.000¥",
+        getThere: "Estació Kyoto-Kawaramachi (línia Hankyu) o Gion-Shijo (línia Keihan)",
+        links: [
+          {label:"Guia del carrer – Japan Guide", url:"https://www.japan-guide.com/e/e3921.html"}
+        ]
       },
       {
-        name: "Kinkakuji (Pabellón Dorado)", cat: "Templo",
-        hours: "9:00–17:00, todos los días",
+        name: "Kinkakuji (Pavelló Daurat)", cat: "Temple",
+        hours: "9:00–17:00, tots els dies",
         address: "1 Kinkakujicho, Kita-ku, Kyoto",
-        tip: "Entrada 500¥. No se puede acceder al interior, solo contemplarlo desde el jardín; llega temprano para evitar autobuses de grupos.",
-        query: "Kinkaku-ji Temple, 1 Kinkakujicho, Kita-ku, Kyoto"
+        tip: "Entrada 500¥. No es pot accedir a l'interior, només contemplar-lo des del jardí; arriba d'hora per evitar autobusos de grups.",
+        query: "Kinkaku-ji Temple, 1 Kinkakujicho, Kita-ku, Kyoto",
+        desc: "Antiga vil·la de retir del shogun Ashikaga Yoshimitsu (1397), convertida en temple zen després de la seva mort. Les seves dues plantes superiors estan recobertes de pa d'or i es reflecteixen a l'estany Kyoko-chi. Patrimoni de la Humanitat des de 1994.",
+        price: "500¥ adults · 300¥ infants",
+        getThere: "Autobús 101 o 205 des de l'estació de Kyoto, parada Kinkakuji-michi",
+        links: [
+          {label:"Guia completa – Japonpedia", url:"https://japonpedia.com/templo-dorado-kioto-kinkakuji/"}
+        ]
       },
       {
-        name: "Mercado Nishiki", cat: "Mercado",
-        hours: "≈9:00–18:00 (varía por tienda, algunas cierran miércoles)",
+        name: "Mercat Nishiki", cat: "Mercat",
+        hours: "≈9:00–18:00 (varia segons la parada, algunes tanquen els dimecres)",
         address: "Nishikikoji-dori, Nakagyo-ku, Kyoto",
-        tip: "La 'cocina de Kioto': más de 100 puestos de comida en 5 manzanas. Ideal para picar cosas pequeñas, no para sentarte a comer.",
-        query: "Nishiki Market, Nakagyo-ku, Kyoto"
+        tip: "La 'cuina de Kyoto': més de 100 parades de menjar en 5 illes de cases. Ideal per picar coses petites, no per seure a menjar.",
+        query: "Nishiki Market, Nakagyo-ku, Kyoto",
+        desc: "Conegut com 'la cuina de Kyoto', aquest mercat cobert amb més de 400 anys d'història s'estén cinc illes de cases amb més de 100 botigues de conserves, dolços, marisc i estris de cuina, moltes gestionades per la mateixa família durant generacions.",
+        price: "Gratuït (pagues el que consumeixes)",
+        getThere: "5 min a peu des de l'estació Kyoto-Kawaramachi (línia Hankyu) o Shijo (línia Karasuma)",
+        links: [
+          {label:"Esmentat a la guia de Kyoto – Chijako", url:"https://www.chijako.com/japon/viajar-kioto-que-ver-y-hacer/"}
+        ]
       },
       {
-        name: "Ginkakuji + Camino de la Filosofía", cat: "Templo / paseo",
-        hours: "8:30–17:00 (16:30 de dic a feb)",
+        name: "Ginkakuji + Camí de la Filosofia", cat: "Temple / passeig",
+        hours: "8:30–17:00 (16:30 de des a feb)",
         address: "2 Ginkakujicho, Sakyo-ku, Kyoto",
-        tip: "Entrada 500¥. El Pabellón de Plata nunca llegó a cubrirse de plata; su jardín de arena rastrillada es una joya. Sal por el Camino de la Filosofía hacia el sur.",
-        query: "Ginkaku-ji Temple, 2 Ginkakujicho, Sakyo-ku, Kyoto"
+        tip: "Entrada 500¥. El Pavelló de Plata mai va arribar a cobrir-se de plata; el seu jardí de sorra rasclada és una joia. Surt pel Camí de la Filosofia cap al sud.",
+        query: "Ginkaku-ji Temple, 2 Ginkakujicho, Sakyo-ku, Kyoto",
+        desc: "Construït el 1482 com a vil·la de retir del shogun Ashikaga Yoshimasa, nét de qui va construir Kinkakuji; malgrat el nom, mai va arribar a recobrir-se de plata. El seu jardí sec de sorra rasclada (Ginshadan) és un exemple mestre de l'estil zen. Just al sud neix el Camí de la Filosofia, un passeig de 2 km vora un canal vorejat de cirerers.",
+        price: "500¥",
+        getThere: "Autobús 5, 17 o 100 des de l'estació de Kyoto fins a la parada Ginkakuji-michi",
+        links: [
+          {label:"Context i història – Japonpedia", url:"https://japonpedia.com/templo-dorado-kioto-kinkakuji/"}
+        ]
       },
       {
-        name: "Santuario Heian", cat: "Santuario",
-        hours: "≈6:00–18:00 (varía por temporada) · recinto gratis, jardín 600¥",
+        name: "Santuari Heian", cat: "Santuari",
+        hours: "≈6:00–18:00 (varia segons la temporada) · recinte gratuït, jardí 600¥",
         address: "97 Nishitennocho, Okazaki, Sakyo-ku, Kyoto",
-        tip: "Torii gigante de color vermellón, uno de los más grandes de Japón. Construido en 1895 para el 1.100 aniversario de Kioto.",
-        query: "Heian Jingu Shrine, 97 Nishitennocho, Sakyo-ku, Kyoto"
+        tip: "Torii gegant de color vermell, un dels més grans del Japó. Construït el 1895 pel 1.100 aniversari de Kyoto.",
+        query: "Heian Jingu Shrine, 97 Nishitennocho, Sakyo-ku, Kyoto",
+        desc: "Santuari relativament modern (1895), construït per commemorar el 1.100 aniversari del trasllat de la capital imperial a Heian-kyo (l'actual Kyoto). El seu torii de més de 24 metres d'alçada és un dels més grans del país, i el seu jardí posterior és famós pels cirerers plorosos a la primavera.",
+        price: "Recinte gratuït · jardí (Shin-en) 600¥",
+        getThere: "Metro Karasuma-Oike + Tozai fins a Higashiyama (30 min) i 10 min a peu, o autobús 5/100 des de l'estació de Kyoto",
+        links: [
+          {label:"Fitxa oficial – Japan Travel (JNTO)", url:"https://www.japan.travel/en/spot/1195/"}
+        ]
       },
       {
-        name: "Sannenzaka y Ninenzaka", cat: "Calles históricas",
-        hours: "Abierto siempre",
-        address: "Higashiyama-ku, Kyoto (entre Kiyomizu-dera y Yasaka)",
-        tip: "Escalinatas de piedra con machiya tradicionales, tiendas de té y dulces. Combínalo con la visita a Kiyomizu-dera.",
-        query: "Sannenzaka Street, Higashiyama-ku, Kyoto"
+        name: "Sannenzaka i Ninenzaka", cat: "Carrers històrics",
+        hours: "Obert sempre",
+        address: "Higashiyama-ku, Kyoto (entre Kiyomizu-dera i Yasaka)",
+        tip: "Escalinates de pedra amb machiya tradicionals, botigues de te i dolços. Combina-ho amb la visita a Kiyomizu-dera.",
+        query: "Sannenzaka Street, Higashiyama-ku, Kyoto",
+        desc: "Carrers empedrats en pendent que connecten Kiyomizu-dera amb el barri de Gion, flanquejats per cases machiya convertides en botigues de te, dolços tradicionals i souvenirs. Segons la llegenda, ensopegar a l'escalinata de Sannenzaka porta mala sort durant tres anys.",
+        price: "Gratuït",
+        getThere: "10 min a peu des de Kiyomizu-dera direcció nord cap a Gion",
+        links: []
       },
       {
-        name: "Santuario Yasaka", cat: "Santuario",
-        hours: "Abierto siempre, entrada gratuita",
+        name: "Santuari Yasaka", cat: "Santuari",
+        hours: "Obert sempre, entrada gratuïta",
         address: "625 Gionmachi Kitagawa, Higashiyama-ku, Kyoto",
-        tip: "Conocido como 'santuario de Gion'. Precioso de noche, iluminado por sus farolillos colgantes.",
-        query: "Yasaka Shrine, 625 Gionmachi Kitagawa, Higashiyama-ku, Kyoto"
+        tip: "Conegut com el 'santuari de Gion'. Preciós de nit, il·luminat pels seus fanalets penjants.",
+        query: "Yasaka Shrine, 625 Gionmachi Kitagawa, Higashiyama-ku, Kyoto",
+        desc: "Conegut popularment com el 'santuari de Gion', data de l'any 656 i és l'origen del Gion Matsuri, un dels tres grans festivals del Japó (juliol). El seu saló principal, que combina honden i haiden en un únic edifici, està envoltat de centenars de fanalets donats per negocis locals.",
+        price: "Gratuït",
+        getThere: "Final de Shijo-dori, al costat de l'entrada de Gion i el Parc Maruyama",
+        links: [
+          {label:"Història i visita – Japan Guide", url:"https://www.japan-guide.com/e/e3903.html"}
+        ]
       },
       {
-        name: "TeamLab Biovortex Kyoto", cat: "Arte digital",
-        hours: "9:00–21:00 (última entrada 19:30, horario puede variar por temporada)",
+        name: "TeamLab Biovortex Kyoto", cat: "Art digital",
+        hours: "9:00–21:00 (última entrada 19:30, l'horari pot variar segons la temporada)",
         address: "21-5 Higashikujo Higashi-Iwamotocho, Minami-ku, Kyoto",
-        tip: "El museo teamLab más grande de Japón (10.000 m²), a 10 min a pie de la Estación de Kioto. Reserva franja horaria con antelación, entrada ≈3.600–4.200¥.",
-        query: "teamLab Biovortex Kyoto, 21-5 Higashikujo Higashi-Iwamotocho, Minami-ku, Kyoto"
+        tip: "El museu teamLab més gran del Japó (10.000 m²), a 10 min a peu de l'estació de Kyoto. Reserva franja horària amb antelació, entrada ≈3.600–4.200¥.",
+        query: "teamLab Biovortex Kyoto, 21-5 Higashikujo Higashi-Iwamotocho, Minami-ku, Kyoto",
+        desc: "Inaugurat l'octubre de 2025, és la instal·lació permanent més gran de teamLab al Japó: més de 50 obres d'art digital immersiu repartides en 10.000 m² centrades en 'fenòmens ambientals' que reaccionen a la presència dels visitants.",
+        price: "≈3.600–4.200¥ segons la franja horària",
+        getThere: "7 min a peu des de la sortida Hachijo de l'estació de Kyoto",
+        links: [
+          {label:"Web oficial – teamLab", url:"https://www.teamlab.art/e/kyoto/"}
+        ]
       }
     ]
   },
 
   tokyo: {
-    jp: "東京", en: "Tokyo",
-    sub: "Templos centenarios, cruces futuristas y excursiones a Kamakura, Enoshima, Nikko y Hakone.",
+    jp: "東京", en: "Tòquio",
+    sub: "Temples centenaris, cruïlles futuristes i excursions a Kamakura, Enoshima, Nikko i Hakone.",
     sites: [
       {
-        name: "Gran Buda de Kamakura (Kotoku-in)", cat: "Templo / excursión",
-        hours: "8:00–17:30 (abr–sep) · 8:00–17:00 (oct–mar)",
+        name: "Gran Buda de Kamakura (Kotoku-in)", cat: "Temple / excursió",
+        hours: "8:00–17:30 (abr–set) · 8:00–17:00 (oct–mar)",
         address: "4-2-28 Hase, Kamakura, Kanagawa",
-        tip: "Entrada 300¥ + 50¥ para ver el interior hueco de la estatua. A 1h en tren desde Tokio (línea JR Yokosuka).",
-        query: "Kotoku-in Great Buddha, 4-2-28 Hase, Kamakura, Kanagawa"
+        tip: "Entrada 300¥ + 50¥ per veure l'interior buit de l'estàtua. A 1h en tren des de Tòquio (línia JR Yokosuka).",
+        query: "Kotoku-in Great Buddha, 4-2-28 Hase, Kamakura, Kanagawa",
+        desc: "Estàtua de bronze de 13,35 m i 93 tones del Buda Amida, fosa el 1252. Originalment estava coberta per un gran saló de fusta que va ser destruït per tifons i un tsunami al segle XV; des de llavors roman a l'aire lliure, essent el segon Buda assegut més gran del Japó després del de Nara.",
+        price: "300¥ + 50¥ interior de l'estàtua",
+        getThere: "JR Yokosuka/Shonan-Shinjuku fins a Kamakura (≈1h des de Tòquio), després Enoden fins a Hase (5 min) + 10 min a peu",
+        links: [
+          {label:"Web oficial del temple Kotoku-in", url:"https://www.kotoku-in.jp/"},
+          {label:"Guia de visita – Japan Experience", url:"https://www.japan-experience.com/es/todo-sobre-japon/kamakura/temples-and-shrines-in-japan/kotoku-in-el-templo-del-gran-buda-de-kamakura"}
+        ]
       },
       {
-        name: "Enoshima", cat: "Isla / excursión",
-        hours: "Isla: abierta siempre · santuario y jardines con horario propio (≈9:00–17:00)",
+        name: "Enoshima", cat: "Illa / excursió",
+        hours: "Illa: oberta sempre · santuari i jardins amb horari propi (≈9:00–17:00)",
         address: "Enoshima, Fujisawa, Kanagawa",
-        tip: "Se combina fácilmente con Kamakura en tren Enoden. Buen atardecer sobre el mar y el Monte Fuji en días claros.",
-        query: "Enoshima Island, Fujisawa, Kanagawa"
+        tip: "Es combina fàcilment amb Kamakura amb el tren Enoden. Bon capvespre sobre el mar i el mont Fuji els dies clars.",
+        query: "Enoshima Island, Fujisawa, Kanagawa",
+        desc: "Petita illa d'uns 4 km de circumferència connectada a terra ferma per una passarel·la de 600 metres. El seu carrer comercial cobert puja fins al santuari Enoshima i diversos miradors amb vistes al mont Fuji els dies clars.",
+        price: "Illa i passeig gratuïts · atraccions de pagament (santuari, escales mecàniques, cova) des de ≈200¥",
+        getThere: "Línia Enoden des de Kamakura fins a l'estació d'Enoshima (≈25 min, 220¥)",
+        links: []
       },
       {
-        name: "Nikko — Santuario Toshogu", cat: "Santuario / excursión",
+        name: "Nikko — Santuari Toshogu", cat: "Santuari / excursió",
         hours: "9:00–17:00 (abr–oct) · 9:00–16:00 (nov–mar)",
         address: "2301 Sannai, Nikko, Tochigi",
-        tip: "Mausoleo del shogun Tokugawa Ieyasu, Patrimonio de la Humanidad. Entrada ≈1.300¥ (2.100¥ con el pabellón del tesoro). Excursión de día completo desde Tokio (~2h en tren).",
-        query: "Toshogu Shrine, 2301 Sannai, Nikko, Tochigi"
+        tip: "Mausoleu del shogun Tokugawa Ieyasu, Patrimoni de la Humanitat. Entrada ≈1.300¥ (2.100¥ amb el pavelló del tresor). Excursió d'un dia sencer des de Tòquio (~2h en tren).",
+        query: "Toshogu Shrine, 2301 Sannai, Nikko, Tochigi",
+        desc: "Mausoleu del primer shogun Tokugawa, Ieyasu, construït el 1617 i ampliat fins a la seva luxosa forma actual el 1636. La seva ornamentació daurada i talles, entre elles els famosos 'tres micos savis' (no veure, no sentir, no dir mal), el converteixen en el santuari més sumptuós del Japó. Patrimoni de la Humanitat.",
+        price: "≈1.300¥ (2.100¥ amb pavelló del tresor)",
+        getThere: "Tren JR o Tobu fins a Nikko (≈2h des de Tòquio), després autobús o 30 min a peu",
+        links: []
       },
       {
-        name: "Palacio Imperial (Jardines Este)", cat: "Palacio / jardín",
-        hours: "9:00–17:00 aprox. (varía por temporada), cerrado lunes y viernes",
+        name: "Palau Imperial (Jardins de l'Est)", cat: "Palau / jardí",
+        hours: "9:00–17:00 aprox. (varia segons la temporada), tancat els dilluns i divendres",
         address: "1-1 Chiyoda, Chiyoda-ku, Tokyo",
-        tip: "Solo los Jardines Este (Higashi Gyoen) se visitan libremente y gratis; el palacio en sí requiere reserva previa online.",
-        query: "Imperial Palace East Gardens, 1-1 Chiyoda, Chiyoda-ku, Tokyo"
+        tip: "Només els Jardins de l'Est (Higashi Gyoen) es visiten lliurement i gratis; el palau en si requereix reserva prèvia en línia.",
+        query: "Imperial Palace East Gardens, 1-1 Chiyoda, Chiyoda-ku, Tokyo",
+        desc: "Residència de l'emperador del Japó, construïda sobre l'emplaçament de l'antic Castell d'Edo. L'edifici principal no es visita, però els Jardins de l'Est ocupen part dels terrenys del castell original i són d'accés lliure i gratuït. Visitar l'interior del palau requereix reserva prèvia (visita guiada gratuïta gestionada per l'Agència de la Casa Imperial).",
+        price: "Jardins de l'Est: gratuït · visita guiada al palau: gratuïta amb reserva prèvia",
+        getThere: "10 min a peu des de l'estació de Tòquio (sortida Marunouchi)",
+        links: [
+          {label:"Reserves oficials – Agència de la Casa Imperial", url:"https://sankan.kunaicho.go.jp/multilingual/lang/es/information.html"},
+          {label:"Guia de visita – 101viajes", url:"https://www.101viajes.com/tokio/palacio-imperial-tokio"}
+        ]
       },
       {
-        name: "Hakone", cat: "Excursión / naturaleza",
-        hours: "Zona de excursión de día completo; teleférico y barco del Lago Ashi ≈9:00–17:00",
+        name: "Hakone", cat: "Excursió / natura",
+        hours: "Zona d'excursió d'un dia sencer; telefèric i vaixell del llac Ashi ≈9:00–17:00",
         address: "Hakone, Ashigarashimo District, Kanagawa",
-        tip: "El Hakone Free Pass cubre tren, teleférico, funicular y barco pirata por el lago, con vistas al Monte Fuji en días claros.",
-        query: "Hakone, Kanagawa"
+        tip: "El Hakone Free Pass cobreix tren, telefèric, funicular i vaixell pirata pel llac, amb vistes al mont Fuji els dies clars.",
+        query: "Hakone, Kanagawa",
+        desc: "Zona de muntanya i aigües termals (onsen) famosa per les seves vistes al mont Fuji des del llac Ashi, el telefèric sobre la vall volcànica d'Owakudani (on es venen els famosos ous negres cuits en aigües sulfuroses) i el Museu d'Art a l'Aire Lliure de Hakone.",
+        price: "Hakone Free Pass ≈6.100¥ (2 dies) des de Shinjuku, inclou transport il·limitat a la zona",
+        getThere: "Línia Odakyu Romancecar des de Shinjuku fins a Hakone-Yumoto (≈85 min)",
+        links: []
       },
       {
-        name: "Akihabara", cat: "Barrio",
-        hours: "Abierto siempre · tiendas ≈10:00–20:00/22:00",
+        name: "Akihabara", cat: "Barri",
+        hours: "Obert sempre · botigues ≈10:00–20:00/22:00",
         address: "Akihabara, Chiyoda-ku, Tokyo",
-        tip: "El barrio del anime, manga y electrónica. Visita también algún Maid Café o los recreativos de varias plantas.",
-        query: "Akihabara, Chiyoda-ku, Tokyo"
+        tip: "El barri de l'anime, el manga i l'electrònica. Visita també algun Maid Café o els recreatius de diverses plantes.",
+        query: "Akihabara, Chiyoda-ku, Tokyo",
+        desc: "Antic mercat negre de components electrònics de la postguerra, avui és la meca mundial de l'anime, el manga, els videojocs i la cultura otaku, amb megabotigues d'electrònica com Yodobashi Camera convivint amb botigues de figures i maid cafés.",
+        price: "Gratuït passejar",
+        getThere: "Estació d'Akihabara (línies JR Yamanote, Keihin-Tohoku, Sobu, Hibiya)",
+        links: [
+          {label:"Guia oficial del barri – GO TOKYO", url:"https://www.gotokyo.org/en/destinations/central-tokyo/akihabara/index.html"}
+        ]
       },
       {
-        name: "Parque Ueno", cat: "Parque",
-        hours: "Abierto siempre, gratis · museos dentro ≈9:30–17:00, cerrados lunes",
+        name: "Parc Ueno", cat: "Parc",
+        hours: "Parc: 5:00–23:00, gratuït · museus a l'interior ≈9:30–17:00, tancats els dilluns",
         address: "Ueno Park, Taito-ku, Tokyo",
-        tip: "Alberga el zoo de Ueno, el Museo Nacional de Tokio y el mercado callejero Ameyoko justo al lado.",
-        query: "Ueno Park, Taito-ku, Tokyo"
+        tip: "Alberga el zoo d'Ueno, el Museu Nacional de Tòquio i el mercat de carrer Ameyoko just al costat.",
+        query: "Ueno Park, Taito-ku, Tokyo",
+        desc: "Un dels primers parcs públics del Japó (1873), amb més de 800 cirerers que el converteixen en el punt de hanami més popular de Tòquio. Al seu interior hi ha el Zoo d'Ueno, el Museu Nacional de Tòquio, el Museu Nacional de Ciències i l'estany Shinobazu.",
+        price: "Parc gratuït · museus ≈600¥ de mitjana, zoo ≈600¥",
+        getThere: "Sortida 'Ueno Park' de l'estació d'Ueno (línia JR Yamanote)",
+        links: [
+          {label:"Fitxa oficial – GO TOKYO", url:"https://www.gotokyo.org/en/spot/482/index.html"},
+          {label:"Fitxa oficial – Japan Travel (JNTO)", url:"https://www.japan.travel/en/spot/1673/"}
+        ]
       },
       {
-        name: "Templo Senso-ji (Asakusa)", cat: "Templo",
-        hours: "Recinto: 24h · Salón principal: 6:00–17:00 (abr–sep) / 6:30–17:00 (oct–mar), entrada gratuita",
+        name: "Temple Senso-ji (Asakusa)", cat: "Temple",
+        hours: "Recinte: 24h · Saló principal: 6:00–17:00 (abr–set) / 6:30–17:00 (oct–mar), entrada gratuïta",
         address: "2-3-1 Asakusa, Taito-ku, Tokyo",
-        tip: "El templo más antiguo de Tokio. Entra por la puerta Kaminarimon y recorre la calle comercial Nakamise-dori hasta el templo.",
-        query: "Sensoji Temple, 2-3-1 Asakusa, Taito-ku, Tokyo"
+        tip: "Entra per la porta Kaminarimon i recorre el carrer comercial Nakamise-dori fins al temple.",
+        query: "Sensoji Temple, 2-3-1 Asakusa, Taito-ku, Tokyo",
+        desc: "El temple budista més antic de Tòquio, fundat l'any 645 segons la llegenda d'uns pescadors que van trobar una estàtua de Kannon al riu Sumida. Després de la porta Kaminarimon (amb el seu fanal gegant de 700 kg), el carrer Nakamise-dori de 250 metres porta fins al temple principal, reconstruït després de la Segona Guerra Mundial.",
+        price: "Gratuït",
+        getThere: "5 min a peu des de l'estació d'Asakusa (línies Ginza, Asakusa, Tobu Skytree)",
+        links: [
+          {label:"Fitxa oficial – GO TOKYO", url:"https://www.gotokyo.org/es/spot/15/index.html"},
+          {label:"Fitxa oficial – Japan Travel (JNTO)", url:"https://www.japan.travel/en/spot/1691/"}
+        ]
       },
       {
-        name: "Escalinata de Kimi ni Todoke / Santuario Suga", cat: "Rincón anime",
-        hours: "Abierto siempre, entrada gratuita",
+        name: "Escalinata de 'Your Name' / Santuari Suga", cat: "Racó anime",
+        hours: "Obert sempre, entrada gratuïta",
         address: "5 Sugacho, Shinjuku-ku, Tokyo",
-        tip: "Las famosas escaleras que aparecen en 'Your Name' (Kimi no Na wa). Es una calle residencial: sé respetuoso con los vecinos.",
-        query: "Suga Shrine stairs, 5 Sugacho, Shinjuku-ku, Tokyo"
+        tip: "Les famoses escales que apareixen a 'Your Name' (Kimi no Na wa). És un carrer residencial: sigues respectuós amb els veïns.",
+        query: "Suga Shrine stairs, 5 Sugacho, Shinjuku-ku, Tokyo",
+        desc: "Escalinata residencial que es va fer mundialment famosa per aparèixer a l'escena final de la pel·lícula d'animació 'Your Name' (Kimi no Na wa, 2016) de Makoto Shinkai. És al costat del petit Santuari Suga, un temple sintoista de barri sense relació directa amb la pel·lícula més enllà de la seva ubicació.",
+        price: "Gratuït",
+        getThere: "10 min a peu des de l'estació Yotsuya-Sanchome (línia Marunouchi)",
+        links: []
       },
       {
-        name: "Santuario Meiji", cat: "Santuario",
-        hours: "≈5:00–18:00 (verano) / 6:00–16:00 (invierno) · Jardín Interior 9:00–16:30 (500¥)",
+        name: "Santuari Meiji", cat: "Santuari",
+        hours: "≈5:00–18:00 (estiu) / 6:00–16:00 (hivern) · Jardí Interior 9:00–16:30 (500¥)",
         address: "1-1 Yoyogikamizonocho, Shibuya-ku, Tokyo",
-        tip: "El santuario sintoísta más visitado de Japón, rodeado de un bosque de 100.000 árboles donados por todo el país.",
-        query: "Meiji Jingu Shrine, 1-1 Yoyogikamizonocho, Shibuya-ku, Tokyo"
+        tip: "El santuari sintoista més visitat del Japó, envoltat d'un bosc de 100.000 arbres donats per tot el país.",
+        query: "Meiji Jingu Shrine, 1-1 Yoyogikamizonocho, Shibuya-ku, Tokyo",
+        desc: "Inaugurat el 1920 en honor a l'emperador Meiji i l'emperadriu Shoken, està envoltat per un bosc artificial de més de 100.000 arbres de 365 espècies donats per tot el Japó, dissenyat per madurar de manera natural durant més d'un segle. Rep uns 10 milions de visitants a l'any.",
+        price: "Santuari gratuït · Jardí Interior 500¥ · Casa del Tresor 500¥",
+        getThere: "Sortida del temple just al costat de l'estació de Harajuku (línia JR Yamanote)",
+        links: [
+          {label:"Fitxa oficial – Japan Travel (JNTO)", url:"https://www.japan.travel/en/spot/1666/"}
+        ]
       },
       {
-        name: "Ikebukuro", cat: "Barrio",
-        hours: "Abierto siempre · tiendas horario habitual",
+        name: "Ikebukuro", cat: "Barri",
+        hours: "Obert sempre · botigues amb horari habitual",
         address: "Ikebukuro, Toshima-ku, Tokyo",
-        tip: "Gran zona comercial con Sunshine City, tiendas de anime en Otome Road y muchos animal cafés.",
-        query: "Ikebukuro, Toshima-ku, Tokyo"
+        tip: "Gran zona comercial amb Sunshine City, botigues d'anime a Otome Road i molts animal cafès.",
+        query: "Ikebukuro, Toshima-ku, Tokyo",
+        desc: "Un dels grans centres comercials i d'oci del nord de Tòquio, amb el complex Sunshine City, l'aquari en alçada Sunshine Aquarium i el carrer Otome Road, equivalent femení d'Akihabara per als fans del manga i l'anime.",
+        price: "Gratuït passejar",
+        getThere: "Estació d'Ikebukuro (línies JR Yamanote, Saikyo, metro Marunouchi/Yurakucho/Fukutoshin)",
+        links: []
       },
       {
-        name: "Pokemon Center Shibuya", cat: "Tienda",
+        name: "Pokemon Center Shibuya", cat: "Botiga",
         hours: "≈10:00–21:00",
         address: "Shibuya PARCO, 15-1 Udagawacho, Shibuya-ku, Tokyo",
-        tip: "El Pokemon Center Mega de Shibuya (Shibuya Loft) está cerrado; visita este dentro de PARCO como alternativa.",
-        query: "Pokemon Center Shibuya, Shibuya PARCO, 15-1 Udagawacho, Shibuya-ku, Tokyo"
+        tip: "El Pokemon Center Mega de Shibuya (Shibuya Loft) està tancat; visita aquest dins de PARCO com a alternativa.",
+        query: "Pokemon Center Shibuya, Shibuya PARCO, 15-1 Udagawacho, Shibuya-ku, Tokyo",
+        desc: "Botiga oficial de Pokémon dins del centre comercial Shibuya PARCO, amb merchandising exclusiu, photocalls temàtics i llançaments limitats. És una parada habitual dins de les rutes de compres de Shibuya.",
+        price: "Entrada gratuïta (botiga)",
+        getThere: "Dins de Shibuya PARCO, 5 min a peu des de l'estació de Shibuya",
+        links: []
       },
       {
-        name: "Cruce de Shibuya y Hachiko", cat: "Icono urbano",
-        hours: "Abierto siempre, gratis",
+        name: "Cruïlla de Shibuya i Hachiko", cat: "Icona urbana",
+        hours: "Oberta sempre, gratuïta",
         address: "Shibuya Crossing, Shibuya-ku, Tokyo",
-        tip: "El cruce peatonal más transitado del mundo. La estatua de Hachiko está justo en la salida homónima de la estación.",
-        query: "Shibuya Crossing, Shibuya-ku, Tokyo"
+        tip: "L'estàtua d'Hachiko és just a la sortida homònima de l'estació.",
+        query: "Shibuya Crossing, Shibuya-ku, Tokyo",
+        desc: "La cruïlla de vianants més transitada del món, amb fins a 3.000 persones creuant alhora a cada canvi de semàfor. Al costat de l'estació hi ha l'estàtua d'Hachiko, el gos Akita que durant gairebé 10 anys va continuar esperant cada tarda el seu amo mort, símbol de lleialtat a tot el Japó.",
+        price: "Gratuït",
+        getThere: "Sortida Hachiko de l'estació de Shibuya",
+        links: [
+          {label:"Fitxa oficial – Japan Travel (JNTO)", url:"https://www.japan.travel/en/spot/2177/"},
+          {label:"Fitxa oficial – GO TOKYO", url:"https://www.gotokyo.org/en/spot/78/index.html"}
+        ]
       },
       {
-        name: "Shinjuku", cat: "Barrio / noche",
-        hours: "Abierto siempre · vida nocturna hasta la madrugada",
+        name: "Shinjuku", cat: "Barri / nit",
+        hours: "Obert sempre · vida nocturna fins a la matinada",
         address: "Shinjuku, Tokyo",
-        tip: "Incluye Kabukicho (ocio nocturno), Omoide Yokocho (callejones de ramen y yakitori) y la estatua de Godzilla sobre el cine Toho.",
-        query: "Shinjuku, Tokyo"
+        tip: "Inclou Kabukicho (oci nocturn), Omoide Yokocho (carrerons de ramen i yakitori) i l'estàtua de Godzilla sobre el cinema Toho.",
+        query: "Shinjuku, Tokyo",
+        desc: "Un dels districtes més densos i variats de Tòquio: gratacels d'oficines a l'oest, el gegantí node de trens més transitat del món, i a l'est el barri d'oci nocturn Kabukicho, amb els estrets carrerons de postguerra d'Omoide Yokocho i el jardí Shinjuku Gyoen com a contrast tranquil.",
+        price: "Gratuït passejar",
+        getThere: "Estació de Shinjuku (línies JR Yamanote, Chuo, Saikyo, Shonan-Shinjuku, diverses línies de metro)",
+        links: []
       },
       {
-        name: "TeamLab Planets", cat: "Arte digital",
-        hours: "Variable según temporada, aprox. 9:00–22:00 (consultar franjas horarias online)",
+        name: "TeamLab Planets", cat: "Art digital",
+        hours: "Variable segons la temporada, aprox. 9:00–22:00 (cal consultar franges horàries en línia)",
         address: "6-1-16 Toyosu, Koto-ku, Tokyo",
-        tip: "Museo inmersivo donde caminas descalzo sobre agua entre proyecciones. Reserva con antelación, no se permite reingreso.",
-        query: "teamLab Planets TOKYO, 6-1-16 Toyosu, Koto-ku, Tokyo"
+        tip: "Reserva amb antelació, no es permet tornar a entrar.",
+        query: "teamLab Planets TOKYO, 6-1-16 Toyosu, Koto-ku, Tokyo",
+        desc: "Museu d'art digital immersiu on els visitants caminen descalços sobre aigua entre projeccions de peixos koi, o s'endinsen en un jardí amb 13.000 orquídies suspeses. Les obres canvien segons els moviments de les persones, difuminant la frontera entre espectador i obra.",
+        price: "Cal consultar segons la franja horària a la web oficial",
+        getThere: "Línia Yurikamome fins a l'estació de Toyosu, 5 min a peu",
+        links: [
+          {label:"Web oficial – teamLab Planets", url:"https://www.teamlab.art/es/e/planets/"}
+        ]
       },
       {
         name: "Shibuya Sky", cat: "Mirador",
         hours: "10:00–22:30 (última entrada 21:20)",
         address: "Shibuya Scramble Square, 2-24-12 Shibuya, Shibuya-ku, Tokyo",
-        tip: "Mirador al aire libre a 229 m. Entrada ≈2.200–2.700¥ comprada online con antelación (más cara en taquilla o después de las 15:00).",
-        query: "Shibuya Sky, Shibuya Scramble Square, 2-24-12 Shibuya, Shibuya-ku, Tokyo"
+        tip: "Entrada ≈2.200–2.700¥ comprada en línia amb antelació (més cara a taquilla o després de les 15:00).",
+        query: "Shibuya Sky, Shibuya Scramble Square, 2-24-12 Shibuya, Shibuya-ku, Tokyo",
+        desc: "Mirador a l'aire lliure a dalt de la torre Shibuya Scramble Square (230 m), l'únic mirador sense vidres pel mig de Tòquio. Des de la seva terrassa 'Sky Stage' es veu directament la cruïlla de Shibuya, i els dies clars el mont Fuji cap a l'oest.",
+        price: "≈2.200–2.700¥ en línia (més car a taquilla, encara més a partir de les 15:00)",
+        getThere: "Connectat directament amb l'estació de Shibuya, sortida Hachiko",
+        links: [
+          {label:"Fitxa oficial – GO TOKYO", url:"https://www.gotokyo.org/es/spot/1749/index.html"}
+        ]
       }
     ]
   }
@@ -694,6 +813,11 @@ function buildCard(site){
   const el = document.createElement('div');
   el.className = 'card';
   const mapQ = encodeURIComponent(site.query);
+
+  const linksHtml = (site.links && site.links.length)
+    ? `<div class="links">${site.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('')}</div>`
+    : `<p style="opacity:.6">Sense enllaços addicionals verificats; utilitza el cercador amb el nom del lloc.</p>`;
+
   el.innerHTML = `
     <div class="top">
       <h3>${site.name}</h3>
@@ -703,19 +827,44 @@ function buildCard(site){
     <div class="row"><span class="ic">📍</span><span>${site.address}</span></div>
     <div class="row tip"><span class="ic">💡</span><span>${site.tip}</span></div>
     <div class="actions">
-      <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${mapQ}">Abrir en Google Maps ↗</a>
-      <button class="btn toggle-map">Ver mapa</button>
+      <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${mapQ}">Obre a Google Maps ↗</a>
+      <button class="btn toggle-map">Veure mapa</button>
     </div>
     <div class="mapwrap">
       <iframe loading="lazy" src="https://maps.google.com/maps?q=${mapQ}&z=15&output=embed"></iframe>
     </div>
+    <button class="btn ghost block toggle-more">Veure més <span class="chev">▾</span></button>
+    <div class="more">
+      <div>
+        <h4>Sobre aquest lloc</h4>
+        <p>${site.desc}</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><span class="flbl">Preu</span>${site.price}</div>
+        <div class="fact"><span class="flbl">Com arribar-hi</span>${site.getThere}</div>
+      </div>
+      <div>
+        <h4>Enllaços de referència</h4>
+        ${linksHtml}
+      </div>
+    </div>
   `;
-  const btn = el.querySelector('.toggle-map');
+
+  const mapBtn = el.querySelector('.toggle-map');
   const mapwrap = el.querySelector('.mapwrap');
-  btn.addEventListener('click', () => {
+  mapBtn.addEventListener('click', () => {
     const isOpen = mapwrap.classList.toggle('open');
-    btn.textContent = isOpen ? 'Ocultar mapa' : 'Ver mapa';
+    mapBtn.textContent = isOpen ? 'Amagar mapa' : 'Veure mapa';
   });
+
+  const moreBtn = el.querySelector('.toggle-more');
+  const more = el.querySelector('.more');
+  moreBtn.addEventListener('click', () => {
+    const isOpen = more.classList.toggle('open');
+    moreBtn.classList.toggle('open', isOpen);
+    moreBtn.innerHTML = isOpen ? 'Veure menys <span class="chev">▾</span>' : 'Veure més <span class="chev">▾</span>';
+  });
+
   return el;
 }
 
